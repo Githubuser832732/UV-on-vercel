@@ -1,1 +1,115 @@
-<h1>Yo, there aint nothin here (404 btw)</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | MathVerse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #6366f1;
+            --color-accent: #8b5cf6;
+            --color-bg: #0a0a0f;
+            --color-text: #f8fafc;
+            --color-text-secondary: #94a3b8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--color-bg);
+            color: var(--color-text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 500px;
+        }
+        
+        .error-code {
+            font-size: clamp(6rem, 20vw, 10rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        p {
+            color: var(--color-text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+        }
+        
+        .math-decoration {
+            position: fixed;
+            font-family: monospace;
+            color: var(--color-primary);
+            opacity: 0.1;
+            font-size: 1.5rem;
+        }
+        
+        .math-decoration.top-left { top: 2rem; left: 2rem; }
+        .math-decoration.top-right { top: 2rem; right: 2rem; }
+        .math-decoration.bottom-left { bottom: 2rem; left: 2rem; }
+        .math-decoration.bottom-right { bottom: 2rem; right: 2rem; }
+    </style>
+</head>
+<body>
+    <span class="math-decoration top-left">∫</span>
+    <span class="math-decoration top-right">∑</span>
+    <span class="math-decoration bottom-left">∂</span>
+    <span class="math-decoration bottom-right">∞</span>
+    
+    <div class="container">
+        <div class="error-code">404</div>
+        <h1>Page Not Found</h1>
+        <p>The equation you&apos;re looking for doesn&apos;t compute. Let&apos;s get you back to solving problems.</p>
+        <a href="/" class="btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            Back to Research Portal
+        </a>
+    </div>
+</body>
+</html>
